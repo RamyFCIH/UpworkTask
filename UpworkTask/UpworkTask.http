@@ -1,0 +1,6 @@
+@UpworkTask_HostAddress = http://localhost:5050
+
+GET {{UpworkTask_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
