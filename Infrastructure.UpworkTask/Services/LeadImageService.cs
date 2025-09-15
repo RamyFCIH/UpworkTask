@@ -16,7 +16,7 @@ public class LeadImageService : ILeadImageService
         var lead = await _context.Leads
             .Include(l => l.Images)
             .FirstOrDefaultAsync(l => l.Id == leadId);
-
+    
         if (lead == null) throw new Exception("Lead not found.");
 
         if (lead.Images.Count + base64Images.Count > 10)
